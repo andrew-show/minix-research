@@ -1,0 +1,64 @@
+diff -Nru minix-3.3.0/external/lgpl3/gmp/fetch.sh minix-3.3.0-1/external/lgpl3/gmp/fetch.sh
+--- minix-3.3.0/external/lgpl3/gmp/fetch.sh	2014-09-14 05:56:50.000000000 +0800
++++ minix-3.3.0-1/external/lgpl3/gmp/fetch.sh	2024-11-08 17:54:46.816804845 +0800
+@@ -7,11 +7,7 @@
+ # Configure fetch method
+ URL="http://www.minix3.org/pkgsrc/distfiles/minix/3.3.0/gmp-5.1.2.tar.bz2"
+ BACKUP_URL="ftp://ftp.gmplib.org/pub/gmp-5.1.2/gmp-5.1.2.tar.bz2"
+-FETCH=ftp
+-which curl >/dev/null
+-if [ $? -eq 0 ]; then
+-	FETCH="curl -O -f"
+-fi
++FETCH=wget
+ 
+ # Fetch sources if not available
+ if [ ! -d dist ];
+diff -Nru minix-3.3.0/external/lgpl3/mpc/fetch.sh minix-3.3.0-1/external/lgpl3/mpc/fetch.sh
+--- minix-3.3.0/external/lgpl3/mpc/fetch.sh	2014-09-14 05:56:50.000000000 +0800
++++ minix-3.3.0-1/external/lgpl3/mpc/fetch.sh	2024-11-08 17:54:46.816804845 +0800
+@@ -7,11 +7,7 @@
+ # Configure fetch method
+ URL="http://www.minix3.org/pkgsrc/distfiles/minix/3.3.0/mpc-1.0.1.tar.gz"
+ BACKUP_URL="http://www.multiprecision.org/mpc/download/mpc-1.0.1.tar.gz"
+-FETCH=ftp
+-which curl >/dev/null
+-if [ $? -eq 0 ]; then
+-	FETCH="curl -O -f"
+-fi
++FETCH=wget
+ 
+ # Fetch sources if not available
+ if [ ! -d dist ];
+diff -Nru minix-3.3.0/external/lgpl3/mpfr/fetch.sh minix-3.3.0-1/external/lgpl3/mpfr/fetch.sh
+--- minix-3.3.0/external/lgpl3/mpfr/fetch.sh	2014-09-14 05:56:50.000000000 +0800
++++ minix-3.3.0-1/external/lgpl3/mpfr/fetch.sh	2024-11-08 17:54:46.816804845 +0800
+@@ -7,11 +7,7 @@
+ # Configure fetch method
+ URL="http://www.minix3.org/pkgsrc/distfiles/minix/3.3.0/mpfr-3.1.2.tar.bz2"
+ BACKUP_URL="http://www.mpfr.org/mpfr-3.1.2/mpfr-3.1.2.tar.bz2"
+-FETCH=ftp
+-which curl >/dev/null
+-if [ $? -eq 0 ]; then
+-	FETCH="curl -O -f"
+-fi
++FETCH=wget
+ 
+ # Fetch sources if not available
+ if [ ! -d dist ];
+diff -Nru minix-3.3.0/gnu/dist/fetch.sh minix-3.3.0-1/gnu/dist/fetch.sh
+--- minix-3.3.0/gnu/dist/fetch.sh	2014-09-14 05:56:50.000000000 +0800
++++ minix-3.3.0-1/gnu/dist/fetch.sh	2024-11-08 17:54:46.816804845 +0800
+@@ -4,11 +4,7 @@
+ echo $0
+ cd `dirname $0`
+ 
+-FETCH=ftp
+-which curl >/dev/null
+-if [ $? -eq 0 ]; then
+-	FETCH="curl -O -f"
+-fi
++FETCH=wget
+ 
+ # Configure fetch method - GMAKE
+ URL="http://www.minix3.org/pkgsrc/distfiles/minix/3.3.0/make-3.80.tar.bz2"

@@ -1,0 +1,14 @@
+diff -Nru minix-3.3.0/external/gpl3/binutils/patches/0008-gold-errors.patch minix-3.3.0-1/external/gpl3/binutils/patches/0008-gold-errors.patch
+--- minix-3.3.0/external/gpl3/binutils/patches/0008-gold-errors.patch	1970-01-01 08:00:00.000000000 +0800
++++ minix-3.3.0-1/external/gpl3/binutils/patches/0008-gold-errors.patch	2024-11-08 19:08:15.645887247 +0800
+@@ -0,0 +1,10 @@
++--- a/gold/errors.h	2011-06-08 12:43:28.000000000 +0800
+++++ b/gold/errors.h	2024-11-08 18:25:24.696425357 +0800
++@@ -24,6 +24,7 @@
++ #define GOLD_ERRORS_H
++ 
++ #include <cstdarg>
+++#include <string>
++ 
++ #include "gold-threads.h"
++ 
