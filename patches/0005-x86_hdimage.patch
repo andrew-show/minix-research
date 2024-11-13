@@ -1,0 +1,12 @@
+diff -Nru minix-3.3.0/releasetools/x86_hdimage.sh minix-3.3.0-1/releasetools/x86_hdimage.sh
+--- minix-3.3.0/releasetools/x86_hdimage.sh	2014-09-14 05:56:50.000000000 +0800
++++ minix-3.3.0-1/releasetools/x86_hdimage.sh	2024-11-13 20:02:26.566914708 +0800
+@@ -30,7 +30,7 @@
+ # we create a disk image of about 2 gig's
+ # for alignment reasons, prefer sizes which are multiples of 4096 bytes
+ #
+-: ${ROOT_SIZE=$((   64*(2**20) / 512))}
++: ${ROOT_SIZE=$((  128*(2**20) / 512))}
+ : ${HOME_SIZE=$((  128*(2**20) / 512))}
+ : ${USR_SIZE=$((  1792*(2**20) / 512))}
+ 

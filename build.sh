@@ -32,7 +32,7 @@ if [ $devel == "yes" ]; then
 
     export DBG='-g -O0'
 
-    for i in minix/kernel minix/fs minix/net minix/servers minix/drivers; do
+    for i in minix/lib minix/kernel minix/fs minix/net minix/servers minix/drivers; do
         nbmake-i386 -C $i clean
         nbmake-i386 -C $i
         nbmake-i386 -C $i install
